@@ -1,0 +1,16 @@
+{
+  "name": "inspiration_app_tests",
+  "version": "1.0.0",
+  "description": "Tests for Inspiration App",
+  "scripts": {
+    "test": "karma start"
+  },
+  "author": "Corey Bilski",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cmbilski/inspiration.git"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}

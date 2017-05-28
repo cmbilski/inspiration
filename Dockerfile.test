@@ -1,0 +1,10 @@
+FROM markadams/chromium-xvfb-js:7
+
+RUN mkdir /test
+WORKDIR /test
+
+RUN npm install -g karma karma-jasmine jasmine-core karma-chrome-launcher angular angular-ui-router angular-mocks
+
+COPY test /test
+COPY app /test/app
+RUN npm install

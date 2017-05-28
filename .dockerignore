@@ -1,0 +1,4 @@
+# Script files don't need to go to the daemon
+scripts/*
+# Content gets mounted in
+content/**/*

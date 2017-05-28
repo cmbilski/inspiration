@@ -1,0 +1,40 @@
+.title {
+  text-align: center;
+  float: left;
+}
+
+.wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.ideaContainer {
+    column-count: 4;
+    column-gap: 1%;
+    margin: 1%;
+    overflow-y: scroll;
+}
+
+.idea {
+  display: inline-block;
+  margin: 1%;
+  width: 100%;
+}
+
+.ideaPopup {
+  width: 85%;
+  max-width: 85%;
+  height: auto;
+  max-height: auto;
+}
+
+.md-dialog-content {
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.ideaPopupContent {
+  width: 100%;
+  max-width: 100%;
+}

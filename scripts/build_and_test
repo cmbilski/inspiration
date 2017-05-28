@@ -1,0 +1,5 @@
+#! /bin/bash
+
+docker build -t karma -f Dockerfile.test .
+docker run --name karma --cap-add=SYS_ADMIN karma
+docker rm -v karma

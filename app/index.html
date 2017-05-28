@@ -1,0 +1,22 @@
+<html ng-app="inspirationApp">
+<head>
+  <script src="resources/js/angular.min.1.6.4.js"></script>
+  <script src="resources/js/angular-animate.min.1.6.4.js"></script>
+  <script src="resources/js/angular-aria.min.1.6.4.js"></script>
+  <script src="resources/js/angular-material.min.1.0.7.js"></script>
+  <script src="resources/js/app.js"></script>
+  <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+  <link rel="stylesheet" type="text/css" href="resources/css/angular-material.min.css">
+</head>
+<body class="wrapper" ng-controller="InspirationController">
+  <div class="ideaContainer">
+    <div class="idea" ng-repeat="idea in ideas" ng-click="clickIdea($event, idea)">
+      <md-content>
+        <md-card>
+          <img ng-src="resources/content/{{idea.image_path}}" class="md-card-image">
+        </md-card>
+      </md-content>
+    </div>
+  </div>
+</body>
+</html>

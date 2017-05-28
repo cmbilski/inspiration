@@ -1,0 +1,3 @@
+#! /bin/bash
+docker build -f Dockerfile.app -t inspiration .
+docker run -d -p 80:80 --name=inspiration -v $(pwd)/content:/usr/share/nginx/html/resources/content/ inspiration
