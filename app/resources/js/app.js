@@ -3,7 +3,8 @@ var theme = 'grey'
 
 inspirationApp.config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
-  .backgroundPalette(theme);
+  .backgroundPalette(theme)
+  .accentPalette(theme);
 });
 
 inspirationApp.controller('InspirationController',
@@ -11,7 +12,12 @@ function InspirationController($scope, $http, $mdDialog) {
   $scope.loadResources = function() {
     $http.get('/resources/content/inspiration.json').then(function(response) {
        $scope.ideas = response.data;
+       if ($scope.ideas.length == 0) {
+         $scope.error = "There doesn't seem to be any inspiration here..."
+       }
     }, function(response) {
+      $scope.error = "Failed to load inspiration";
+      console.log($scope.error);
       console.log(response);
     });
   }
